@@ -7,10 +7,9 @@
 :root {
   --font-color: #111;
   --bg-color: #313131;
-  --border-1-color: #595f43;
-  --border-2-color: #abb78a;
-  --border-3-color: #8b966c;
+  --board-border-color: #8b966c;
   --board-color: #becaa0;
+  --food-color: #a6b57f;
 }
 
 body {
@@ -34,18 +33,8 @@ body,
   margin: 2px;
 }
 
-.game-border-1 {
-  border: var(--border-1-color) solid 10px;
-  border-radius: 30px;
-}
-
-.game-border-2 {
-  border: var(--border-2-color) solid 8px;
-  border-radius: 20px;
-}
-
-.game-border-3 {
-  border: var(--border-3-color) solid 20px;
+.board-border {
+  border: var(--board-border-color) solid 20px;
   border-radius: 12px;
   background-color: var(--board-color);
 }
@@ -73,7 +62,7 @@ body,
 #high-score {
   font-size: 40px;
   font-weight: bolder;
-  color: var(--border-3-color);
+  color: var(--board-border-color);
 }
 
 .score-container {
@@ -89,12 +78,12 @@ body,
 }
 
 .snake {
-  border: #111111 1px dotted;
+  border: var(--font-color) 1px dotted;
 }
 
 .food {
-  background-color: var(--border-3-color);
-  border: var(--border-1-color) 4px solid;
+  background-color: var(--food-color);
+  border: var(--board-border-color) 4px solid;
   border-radius: 50%;
 
   animation: pulse 1s infinite;
